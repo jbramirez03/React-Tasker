@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Tasks from './components/Tasks';
+import AddTask from './components/AddTask';
 import { useState } from 'react';
 
 
@@ -38,6 +39,7 @@ function App() {
     <div className="container col-lg-6 mt-3 bg-light">
       <Header />
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={setReminder} /> : <h3 className='text-center mt-3'>No tasks</h3>}
+      <AddTask />
     </div>
   );
 }
