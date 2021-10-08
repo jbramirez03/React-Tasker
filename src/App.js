@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="container col-lg-6 mt-3 bg-light">
       <Header />
-      <Tasks tasks={tasks} onDelete={deleteTask} />
+      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} /> : <h3 className='text-center mt-3'>No tasks</h3>}
     </div>
   );
 }
