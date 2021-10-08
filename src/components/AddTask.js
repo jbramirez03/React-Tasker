@@ -1,15 +1,14 @@
-import React from 'react'
 
 const AddTask = () => {
     return (
         <form>
             <div>
                 <label>Reminder name</label>
-                <input type="text" className="form-control" aria-describedby="emailHelp" placeholder="Haircut appointment..." />
+                <input type="text" className="form-control" placeholder="Haircut appointment..." />
             </div>
             <div>
                 <label>Day and Time</label>
-                <input type="text" className="form-control" aria-describedby="emailHelp" placeholder="Sep 12th at 1:00pm" />
+                <input type="text" className="form-control" placeholder="Sep 12th at 1:00pm" />
             </div>
             <div class="form-check">
                 <input type="checkbox" className="form-check-input" />
