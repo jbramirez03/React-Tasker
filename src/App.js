@@ -26,10 +26,14 @@ function App() {
     }
   ]);
 
+  const deleteTask = (id) => {
+    console.log('delete', id);
+  };
+
   return (
     <div className="container col-lg-6 mt-3 bg-light">
       <Header />
-      <Tasks tasks={tasks} />
+      <Tasks tasks={tasks} onDelete={deleteTask} />
     </div>
   );
 }
