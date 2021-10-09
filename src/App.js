@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className="container col-lg-6 mt-3 bg-light">
-      <Header />
+      <Header onAdd={() => setShowAdd(!showAdd)} />
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={setReminder} /> : <h3 className='text-center mt-3'>No tasks</h3>}
       {showAdd && <AddTask onAdd={addTask} />}
     </div>
