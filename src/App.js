@@ -1,8 +1,9 @@
 import "./App.css";
-import Header from "./components/Header";
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
 import { useState } from 'react';
+import TaskContainer from "./components/TaskContainer";
+import Nav from './components/Nav';
 
 
 function App() {
@@ -43,11 +44,14 @@ function App() {
   };
 
   return (
-    <div className="container col-lg-6 mt-3 bg-light">
-      <Header onAdd={() => setShowAdd(!showAdd)} currentShow={showAdd} />
-      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={setReminder} /> : <h3 className='text-center mt-3'>No tasks</h3>}
-      {showAdd && <AddTask onAdd={addTask} />}
-    </div>
+    <>
+      <Nav />
+      <div className="container col-lg-6 mt-3 bg-light">
+        <TaskContainer onAdd={() => setShowAdd(!showAdd)} currentShow={showAdd} />
+        {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={setReminder} /> : <h3 className='text-center mt-3'>No tasks</h3>}
+        {showAdd && <AddTask onAdd={addTask} />}
+      </div>
+    </>
   );
 }
 
